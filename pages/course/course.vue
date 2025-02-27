@@ -47,7 +47,6 @@
 					</view>
 				</view>
 			</view>
-			<!-- <view> -->
 				<view class="course-list">
 					<view class="course-item" v-for="(value,key,index) in couses" :key="index" @tap="toCourseDetail(index)">
 						<view class="thematic">
@@ -68,7 +67,6 @@
 						</view>
 					</view>
 				</view>
-			<!-- </view> -->
 			<u-loadmore :status="status" :height="16" :fontSize="16" :loading-text="loadingText" :loadmore-text="loadmoreText" :nomore-text="nomoreText" line/><strong></strong>
 		</view>
 		<ScreenPopup :showPopup="show" @popupClose="close" @changetype="init" />
@@ -89,7 +87,6 @@
 			return {
 				saveCouse: [],
 				couses: [],
-				// value1: 0,
 				src:'../../static/img/user/avatar.png',
 				inputStyle: {
 					paddingLeft: '6px'
@@ -101,7 +98,6 @@
 				nomoreText: '实在没有了',
 				show: false,
 				keyword: ''
-				// footerTabbar: this.$store.state.global.footerTabbar,
 			}
 		},
 		onLoad() {
@@ -110,9 +106,6 @@
 				uni.redirectTo({url:'../login/login'});
 			}
 			uni.hideTabBar()
-			// uni.preloadPage({
-			// 	url: '../../pages/index/index'
-			// })
 			uni.preloadPage({
 				url: '../../pages/search/search'
 			})
@@ -136,7 +129,6 @@
 							case 0:
 								if(item === 1)	{
 									Course.forEach(element => {
-										console.log(element)
 										if(element.type === 'design')
 										this.couses.push(element)
 									})
@@ -208,7 +200,6 @@
 				uni.navigateTo({
 					url:`/pages/search/search?keyword=${this.keyword}`
 				})
-				// this.show = true
 			},
 			close() {
 				this.show = false
@@ -220,21 +211,8 @@
 				})
 			},
 			change(e) {
-				// console.log(e);
-				// if(e != '') {
-				// 	this.couses = []
-				// 	this.saveCouse.forEach(item => {
-				// 		if(item.title.includes(e)){
-				// 			this.couses.push(item)
-				// 		}
-				// 	})
-				// }
-				// else {
-				// 	this.couses = this.saveCouse
-				// }
 			},
 			search(e) {
-				console.log(e);
 				if(e) {
 					uni.navigateTo({
 						url:`/pages/search/search?keyword=${e}`
@@ -441,18 +419,12 @@ page {
 					}
 				}
 			}
-		
-			
-		
 		}
 		
 		/deep/ .u-loadmore__content__text {
 			line-height: 16px!important;
 		}
 	}
-	
-	
-	
 }
 
 </style>

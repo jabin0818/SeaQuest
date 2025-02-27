@@ -1,11 +1,5 @@
 <template>
 	<view id="message-content">
-		<!-- <view class="message-title">
-			消息
-		</view>
-		<view class="message-index">
-			
-		</view> -->
 		<tabControl :current="current" :values="items" bgc="#fff" :fixed="true" :scrollFlag="true" :isEqually="false"
 			@clickItem="onClickItem"></tabControl>
 		<!-- 使用 swiper 配合 滑动切换 -->
@@ -16,34 +10,32 @@
 			</swiper-item>
 		</swiper>
 		<view id="study-content" v-if="current === 0">
-			<!-- <view v-for="value in messages"> -->
-				<view class="message-list">
-					<view class="message-item" v-for="value,index in messages" :key="index">
-						<view class="message-user">
-							<view class="message-user-avatar">
-								<image :src="value.avatar"></image>
+			<view class="message-list">
+				<view class="message-item" v-for="value,index in messages" :key="index">
+					<view class="message-user">
+						<view class="message-user-avatar">
+							<image :src="value.avatar"></image>
+						</view>
+						<view class="message-user-info">
+							<view class="username">
+								{{value.username}}
 							</view>
-							<view class="message-user-info">
-								<view class="username">
-									{{value.username}}
-								</view>
-								<view class="status">
-									{{value.status}}
-								</view>
-							</view>
-							<view class="message-user-time">
-								{{value.time}}
+							<view class="status">
+								{{value.status}}
 							</view>
 						</view>
-						<view class="message-info">
-							{{value.info}}
-						</view>
-						<view class="message-picture" v-if="value.img">
-							<image :src="value.img" mode="widthFix"></image>
+						<view class="message-user-time">
+							{{value.time}}
 						</view>
 					</view>
+					<view class="message-info">
+						{{value.info}}
+					</view>
+					<view class="message-picture" v-if="value.img">
+						<image :src="value.img" mode="widthFix"></image>
+					</view>
 				</view>
-			<!-- </view> -->
+			</view>
 		</view>
 		<view id="system-content" v-else>
 			<view class="message-list">
@@ -140,7 +132,6 @@
 				value1: 0,
 				items: ['学习', '系统'],
 				current: 0
-				// footerTabbar: this.$store.state.global.footerTabbar,
 			}
 		},
 		onLoad() {
@@ -167,14 +158,10 @@
 		},
 		methods: {
 			onClickItem(val) {
-				// console.log(val);
 				this.current = val.currentIndex;
-				// console.log(this.current);
 			},
 			scollSwiper(e) {
-				// console.log(e);
 				this.current = e.target.current;
-				// console.log(this.current);
 			}
 		},
 	}
@@ -188,24 +175,6 @@
 
 <style lang="scss" scoped>
 	#message-content {
-		// .message-title {
-		// 	position: relative;
-		// 	top: 25px;
-		// 	left: 22px;
-		// 	font-size: 28px;
-		// 	font-weight: 400;
-		// 	letter-spacing: 0px;
-		// 	line-height: 30px;
-		// 	color: rgba(31, 31, 57, 1);
-		// 	text-align: left;
-		// 	vertical-align: top;
-		// }
-
-		// .testBox{
-		// 	width: 100px;
-		// 	height: 300px;
-		// 	background-color: red;
-		// }
 
 		#study-content,
 		#system-content {
@@ -276,7 +245,5 @@
 				}
 			}
 		}
-
-
 	}
 </style>

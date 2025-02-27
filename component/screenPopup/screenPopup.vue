@@ -37,8 +37,6 @@
 							编程
 						</view>
 					</view>
-					
-					
 				</view>
 			</view>
 			<view class="screenPopup-price">
@@ -109,52 +107,36 @@ export default {
 	  }
 	},
 	mounted() {
-		// console.log(this.showPopup);
-		// console.log(this.show);
 	},
 	methods: {
 		open() {
-			// console.log('open');
 		},
 		close() {
 			this.show = false
 			this.$emit("popupClose")
-			// console.log('close');
 		},
 		down(e){
-			// e中包含了原有的e信息, 并添加了custom对象
-			const type = e.custom.type;
 			const minValue = e.custom.minValue;
 			const maxValue = e.custom.maxValue;
 			this.minValue = minValue
 			this.maxValue = maxValue
-			// console.log(type, minValue, maxValue,'down');			
 		},
 		up(e){
-			// e中包含了原有的e信息, 并添加了custom对象
-			const type = e.custom.type;
 			const minValue = e.custom.minValue;
 			const maxValue = e.custom.maxValue ;		
 			this.minValue = minValue
 			this.maxValue = maxValue
-			// console.log(type, minValue, maxValue,'up');			
 		},
 		move(e){
-			// e中包含了原有的e信息, 并添加了custom对象
-			const type = e.custom.type;
 			const minValue = e.custom.minValue;
 			const maxValue = e.custom.maxValue ;
-			const curValue  = e.custom.curValue  ;	
 			this.minValue = minValue
 			this.maxValue = maxValue
-			// console.log(type, minValue, maxValue, curValue,'move');			
 		},
 		classifySelect(index) {
 			if(this.classifyBtn[index]) {
-				// this.classifyBtn[index] = 0
 				this.$set(this.classifyBtn,index, 0);
 			} else {
-				// this.classifyBtn[index] = 1
 				this.$set(this.classifyBtn,index, 1);
 			}
 		},
@@ -174,15 +156,11 @@ export default {
 		},
 		confirmBtn() {
 			if(!(this.classifyBtn.find(i => i ===1))) {
-				console.log('请选择一个分类!');
 				uni.$u.toast('请选择一个分类!')
 				return
 			}
 			this.close()
 			uni.$u.toast('查询成功!')
-			// this.$emit('changetype',this.classifyBtn)
-			// console.log('max',this.maxValue);
-			// console.log('min',this.minValue);
 			let price = {
 				max: this.maxValue,
 				min: this.minValue
@@ -193,7 +171,6 @@ export default {
 	watch: {
 		showPopup(newvalue) {
 			this.show = newvalue
-			// console.log(newvalue)
 		}
 	}
   }
@@ -240,7 +217,6 @@ export default {
 			height: 48px;
 			font-size: 20px;
 			color: rgba(31, 31, 57, 1);
-			// margin-bottom: 12px;
 		}
 		
 		.main{

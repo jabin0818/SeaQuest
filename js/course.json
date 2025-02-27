@@ -1,200 +1,198 @@
 [
-	{
-		"id": "01",
-		"title": "英语语法精讲",
-		"img": "../../static/img/ad/英语语法.jpg",
-		"user": "英语兔",
-		"price": "120",
-		"duration": "8小时15分",
-		"type": "English",
-		"chapter": [
-			{
-				"title": "英语语法1",
-				"mv": "../../static/img/mv/英语语法.mp4",
-				"duration": "2:00"
-			},
-			{
-				"title": "英语语法2",
-				"mv": "../../static/img/mv/history.mp4",
-				"duration": "2:00"
-			},
-			{
-				"title": "英语语法3",
-				"mv": "../../static/img/mv/uniapp.mp4",
-				"duration": "4:15"
-			}
-		],
-		"description": "爆肝一年半, 解密英语语法 -- 这也许是你见过最好的英语语法合集 -- 零基础也不怕!",
-		"section": "24"
-	},
-	{
-		"id": "02",
-		"title": "uniapp零基础入门",
-		"img": "../../static/img/ad/uniapp.jpg",
-		"user": "咸虾米_",
-		"price": "869",
-		"duration": "12小时59分",
-		"type": "program",
-		"chapter": [
-			{
-				"title": "基础篇",
-				"mv": "../../static/img/mv/uniapp.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "应用篇",
-				"mv": "../../static/img/mv/uniapp.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "原理篇",
-				"mv": "../../static/img/mv/uniapp.mp4",
-				"duration": "6:31"
-			}
-		],
-		"description": "零基础入手uniapp，学习过程中的源码开发，课程从vue语法、小程序文档与uni文档的差异化、API 调用、综合性的实例项目、打包到不同类型的平台等知识点的学习，循序渐进的掌握uni-app。",
-		"section": "65"
-	},
-	{
-		"id": "03",
-		"title": "设计美学的底层逻辑",
-		"img": "../../static/img/ad/design.jpg",
-		"user": "恒星创设的一恒",
-		"price": "30",
-		"duration": "22小时13分",
-		"type": "design",
-		"chapter": [
-			{
-				"title": "设计美学的底层逻辑1",
-				"mv": "../../static/img/mv/design.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "设计美学的底层逻辑2",
-				"mv": "../../static/img/mv/design.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "设计美学的底层逻辑3",
-				"mv": "../../static/img/mv/design.mp4",
-				"duration": "6:31"
-			}
-		],
-		"description": "教程的目的在于通过术的学习教会你思维方式。",
-		"section": "24"
-	},
-	{
-		"id": "04",
-		"title": "板绘",
-		"img": "../../static/img/ad/板绘.png",
-		"user": "马栖子",
-		"price": "590",
-		"duration": "18小时33分",
-		"type": "painting",
-		"chapter": [
-			{
-				"title": "板绘基础",
-				"mv": "../../static/img/mv/板绘.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "板绘进阶",
-				"mv": "../../static/img/mv/板绘.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "板绘应用",
-				"mv": "../../static/img/mv/板绘.mp4",
-				"duration": "6:31"
-			}
-		],
-		"description": "希望对你有所帮助~",
-		"section": "24"
-	},
-	{
-		"id": "05",
-		"title": "建筑学",
-		"img": "../../static/img/ad/建筑学.png",
-		"user": "同济⚪耶鲁⚪加州艺术学院",
-		"price": "300",
-		"duration": "5小时51分",
-		"type": "architecture",
-		"chapter": [
-			{
-				"title": "建筑学（一）",
-				"mv": "../../static/img/mv/建筑学.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "建筑学（二）",
-				"mv": "../../static/img/mv/建筑学.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "建筑学（三）",
-				"mv": "../../static/img/mv/建筑学.mp4",
-				"duration": "6:31"
-			}
-		],
-		"description": "建筑学，三分匠，七分主",
-		"section": "76"
-	},
-	{
-		"id": "06",
-		"title": "中国历史",
-		"img": "../../static/img/ad/history.png",
-		"user": "及第阁",
-		"price": "740",
-		"duration": "27小时11分",
-		"type": "history",
-		"chapter": [
-			{
-				"title": "中国古代历史",
-				"mv": "../../static/img/mv/history.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "中国近代历史",
-				"mv": "../../static/img/mv/history.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "中国现代历史",
-				"mv": "../../static/img/mv/history.mp4",
-				"duration": "6:31"
-			}
-		],
-		"description": "中国是世界上最早诞生文明的国家之一，有近5000年的历史。中国古代史包括三个阶段：原始社会阶段（距今约170万年前-约公元前2070年）、奴隶社会阶段（约公元前2070年-公元前475年）和封建社会阶段（公元前475年-公元1840年）。",
-		"section": "180"
-		
-	},
-	{
-		"id": "07",
-		"title": "钢琴零基础入门课程",
-		"img": "../../static/img/ad/piano.png",
-		"user": "三国钢琴-小佳老师",
-		"price": "930",
-		"duration": "10小时06分",
-		"type": "music",
-		"chapter": [
-			{
-				"title": "钢琴零基础入门课程1",
-				"mv": "../../static/img/mv/piano.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "钢琴零基础入门课程2",
-				"mv": "../../static/img/mv/piano.mp4",
-				"duration": "10:20"
-			},
-			{
-				"title": "钢琴零基础入门课程3",
-				"mv": "../../static/img/mv/piano.mp4",
-				"duration": "6:31"
-			}
-		],
-		"description": "非常系统的钢琴教学：从0基础手指练习开始讲起",
-		"section": "76"
-	}
-	
+  {
+    "id": "01",
+    "title": "英语语法精讲",
+    "img": "../../static/img/ad/英语语法.jpg",
+    "user": "英语兔",
+    "price": "120",
+    "duration": "8小时15分",
+    "type": "English",
+    "chapter": [
+      {
+        "title": "英语语法1",
+        "mv": "../../static/img/mv/英语语法.mp4",
+        "duration": "2:00"
+      },
+      {
+        "title": "英语语法2",
+        "mv": "../../static/img/mv/history.mp4",
+        "duration": "2:00"
+      },
+      {
+        "title": "英语语法3",
+        "mv": "../../static/img/mv/uniapp.mp4",
+        "duration": "4:15"
+      }
+    ],
+    "description": "爆肝一年半, 解密英语语法 -- 这也许是你见过最好的英语语法合集 -- 零基础也不怕!",
+    "section": "24"
+  },
+  {
+    "id": "02",
+    "title": "uniapp零基础入门",
+    "img": "../../static/img/ad/uniapp.jpg",
+    "user": "咸虾米_",
+    "price": "869",
+    "duration": "12小时59分",
+    "type": "program",
+    "chapter": [
+      {
+        "title": "基础篇",
+        "mv": "../../static/img/mv/uniapp.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "应用篇",
+        "mv": "../../static/img/mv/uniapp.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "原理篇",
+        "mv": "../../static/img/mv/uniapp.mp4",
+        "duration": "6:31"
+      }
+    ],
+    "description": "零基础入手uniapp，学习过程中的源码开发，课程从vue语法、小程序文档与uni文档的差异化、API 调用、综合性的实例项目、打包到不同类型的平台等知识点的学习，循序渐进的掌握uni-app。",
+    "section": "65"
+  },
+  {
+    "id": "03",
+    "title": "设计美学的底层逻辑",
+    "img": "../../static/img/ad/design.jpg",
+    "user": "恒星创设的一恒",
+    "price": "30",
+    "duration": "22小时13分",
+    "type": "design",
+    "chapter": [
+      {
+        "title": "设计美学的底层逻辑1",
+        "mv": "../../static/img/mv/design.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "设计美学的底层逻辑2",
+        "mv": "../../static/img/mv/design.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "设计美学的底层逻辑3",
+        "mv": "../../static/img/mv/design.mp4",
+        "duration": "6:31"
+      }
+    ],
+    "description": "教程的目的在于通过术的学习教会你思维方式。",
+    "section": "24"
+  },
+  {
+    "id": "04",
+    "title": "板绘",
+    "img": "../../static/img/ad/板绘.png",
+    "user": "马栖子",
+    "price": "590",
+    "duration": "18小时33分",
+    "type": "painting",
+    "chapter": [
+      {
+        "title": "板绘基础",
+        "mv": "../../static/img/mv/板绘.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "板绘进阶",
+        "mv": "../../static/img/mv/板绘.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "板绘应用",
+        "mv": "../../static/img/mv/板绘.mp4",
+        "duration": "6:31"
+      }
+    ],
+    "description": "希望对你有所帮助~",
+    "section": "24"
+  },
+  {
+    "id": "05",
+    "title": "建筑学",
+    "img": "../../static/img/ad/建筑学.png",
+    "user": "同济⚪耶鲁⚪加州艺术学院",
+    "price": "300",
+    "duration": "5小时51分",
+    "type": "architecture",
+    "chapter": [
+      {
+        "title": "建筑学（一）",
+        "mv": "../../static/img/mv/建筑学.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "建筑学（二）",
+        "mv": "../../static/img/mv/建筑学.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "建筑学（三）",
+        "mv": "../../static/img/mv/建筑学.mp4",
+        "duration": "6:31"
+      }
+    ],
+    "description": "建筑学，三分匠，七分主",
+    "section": "76"
+  },
+  {
+    "id": "06",
+    "title": "中国历史",
+    "img": "../../static/img/ad/history.png",
+    "user": "及第阁",
+    "price": "740",
+    "duration": "27小时11分",
+    "type": "history",
+    "chapter": [
+      {
+        "title": "中国古代历史",
+        "mv": "../../static/img/mv/history.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "中国近代历史",
+        "mv": "../../static/img/mv/history.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "中国现代历史",
+        "mv": "../../static/img/mv/history.mp4",
+        "duration": "6:31"
+      }
+    ],
+    "description": "中国是世界上最早诞生文明的国家之一，有近5000年的历史。中国古代史包括三个阶段：原始社会阶段（距今约170万年前-约公元前2070年）、奴隶社会阶段（约公元前2070年-公元前475年）和封建社会阶段（公元前475年-公元1840年）。",
+    "section": "180"
+  },
+  {
+    "id": "07",
+    "title": "钢琴零基础入门课程",
+    "img": "../../static/img/ad/piano.png",
+    "user": "三国钢琴-小佳老师",
+    "price": "930",
+    "duration": "10小时06分",
+    "type": "music",
+    "chapter": [
+      {
+        "title": "钢琴零基础入门课程1",
+        "mv": "../../static/img/mv/piano.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "钢琴零基础入门课程2",
+        "mv": "../../static/img/mv/piano.mp4",
+        "duration": "10:20"
+      },
+      {
+        "title": "钢琴零基础入门课程3",
+        "mv": "../../static/img/mv/piano.mp4",
+        "duration": "6:31"
+      }
+    ],
+    "description": "非常系统的钢琴教学：从0基础手指练习开始讲起",
+    "section": "76"
+  }
 ]

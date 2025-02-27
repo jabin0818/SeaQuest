@@ -77,9 +77,6 @@
 				wornScroll:0,    //上一次移动距离(用来判断是左滑还是右滑)
 			};
 		},
-		created(){
-			
-		},
 		mounted(){
 			setTimeout(()=>{
 				uni.createSelectorQuery().in(this).select("#tabcard").boundingClientRect((res)=>{
@@ -88,22 +85,15 @@
 				uni.getSystemInfo({
 				    success: (res)=> {
 						this.windowWidth = res.windowWidth;
-				        // console.log(this.windowWidth);
 						this.values.forEach((i,v)=>{
 							let info = uni.createSelectorQuery().in(this);
 							info.select("#item"+v).boundingClientRect((res)=>{
-								// 获取第一个元素到左边的距离
-								// if(v==0){
-								// 	this.startLenght = res.left
-								// }
 							    this.widthList.push(res.width)
 								this.leftList.push(res.left)
 								
 							}).exec()
 							
 						})
-						// console.log(this.leftList)
-						// console.log(this.widthList)
 				    }
 				});
 			})
@@ -142,14 +132,12 @@
 			tabListScroll(index){
 				let scoll = 0;
 				this.wornScroll = index;
-				// this.wornScroll-this.newScroll>0 在向左滑  ←←←←←
 				if(this.wornScroll-this.newScroll>0){
 					for(let i = 0;i<this.leftList.length;i++){
 						if(i>1&&i==this.currentIndex){
 							scoll = this.leftList[i-1]
 						}
 					}
-					// console.log('在向左滑',scoll)
 				}else{
 					if(index>1){
 						for(let i = 0;i<this.leftList.length;i++){
@@ -160,7 +148,6 @@
 					}else{
 						scoll = 0
 					}
-					// console.log('在向右滑')
 				}
 				this.newScroll = this.wornScroll;
 				this.scrollLeft = scoll;
@@ -169,7 +156,7 @@
 	}
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 	.fxied{
 		position: fixed;
 		z-index: 2;
@@ -185,13 +172,11 @@
 			display: inline-block;
 			position: relative;
 			text{
-				// font-size: 30rpx;
 				line-height: 44rpx;
 				color: #666;
 				transition: all 0.3s ease 0s;
 			}
 			.activeLine{
-				// width: 48rpx;
 				height: 8rpx;
 				border-radius: 4rpx;
 				background-color: #3fa162;
@@ -202,9 +187,6 @@
 				transition: all 0.3s ease 0s;
 			}
 		}
-		.tabItem:first-child{
-			// margin-left: 22rpx;
-		}
 		.tabItem:last-child{
 			margin-right: 24rpx;
 		}
@@ -212,7 +194,6 @@
 			text{
 				color: #333;
 				font-weight:600;
-				// font-size: 32rpx;
 			}
 			.activeLine{
 				opacity: 1;

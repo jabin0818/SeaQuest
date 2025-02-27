@@ -62,7 +62,6 @@
 			return {
 				saveCouse: [],
 				couses: [],
-				// value1: 0,
 				src:'../../static/img/user/avatar.png',
 				inputStyle: {
 					paddingLeft: '6px'
@@ -86,9 +85,6 @@
 		},
 		methods: {
 			screenCourse() {
-				// uni.navigateTo({
-				// 	url:`/pages/search/search?keyword=${this.keyword}`
-				// })
 			},
 			close() {
 				this.show = false
@@ -102,9 +98,7 @@
 			change(e) {
 			},
 			search(e) {
-				// console.log(e);
 				if(e) {
-					// console.log(e);
 					this.couses = []
 					this.saveCouse.forEach(item => {
 						if(item.title.includes(e)){
@@ -117,17 +111,11 @@
 			}
 		},
 		onReady() {
-			// this.saveCouse = Course.filter(item => {
-			// 	return item
-			// })
-			console.log(this.userCollect.collects);
-			console.log(this.userCollect.collects.length);
 			if(this.userCollect.collects.length) {
 				this.userCollect.collects.forEach(item => {
 					let course = Course.find(item2 => {
 						return item2.id === item
 					})
-					console.log(course);
 					this.couses.push(course)
 				})
 			}
@@ -277,18 +265,12 @@ page {
 					}
 				}
 			}
-		
-			
-		
 		}
 		
 		/deep/ .u-loadmore__content__text {
 			line-height: 16px!important;
 		}
 	}
-	
-	
-	
 }
 
 </style>

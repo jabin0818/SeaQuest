@@ -65,9 +65,9 @@
 								<text>/{{userCourse[item.id].length}}</text>
 							</view>
 						</view>
-						<!-- <view class="plan-course-item">
+						<view class="plan-course-item">
 							<view class="plan-course-left">
-								<CircleProgress :percentNum2=".3" :canvasId="2" class="circleProgress" />
+								<CircleProgress :percentNumOne="0.3" :canvasId="1" class="circleProgress" />
 								<text>产品设计课程</text>
 							</view>
 							<view class="plan-course-right">
@@ -77,14 +77,24 @@
 						</view>
 						<view class="plan-course-item">
 							<view class="plan-course-left">
-								<CircleProgress :percentNum3=".3" :canvasId="3" class="circleProgress" />
+								<CircleProgress :percentNumTwo="0.3" :canvasId="2" class="circleProgress" />
 								<text>色彩理论课程</text>
 							</view>
 							<view class="plan-course-right">
 								<text class="strong">5</text>
 								<text>/24</text>
 							</view>
-						</view> -->
+						</view>
+						<view class="plan-course-item">
+							<view class="plan-course-left">
+								<CircleProgress :percentNumThree="0.7" :canvasId="3" class="circleProgress" />
+								<text>英语语法精讲</text>
+							</view>
+							<view class="plan-course-right">
+								<text class="strong">1</text>
+								<text>/16</text>
+							</view>
+						</view>
 					</view>
 				</view>
 			</view>
@@ -136,17 +146,13 @@
 			uni.preloadPage({
 				url: '/pages/mine/mine'
 			})
-			// console.log('App Show')
-			// console.log(this.userCourse);
 			this.courses = Course.filter((item) => {
 				return this.userCourse.hasOwnProperty(item.id)
 			})
-			// console.log(this.courses.length);
 			if(this.courses.length > 3) {
 				this.courses.splice(3)
 			} else {
 			}
-			// console.log(this.courses);
 		},
 		onShow() {
 			uni.hideTabBar()
@@ -159,7 +165,6 @@
 			},
 			finishedNum(item) {
 				let num = 0
-				// console.log(item);
 				this.userCourse[item.id].forEach((item1) => {
 					if(item1 === 1) {
 						num ++ 
@@ -170,7 +175,6 @@
 			schedule(item) {
 				let fin = this.finishedNum(item)
 				let all = this.userCourse[item.id].length
-				// console.log((fin / all).toFixed(1));
 				return Number((fin / all).toFixed(1))
 			}
 		},
@@ -183,7 +187,6 @@
 	
 <style lang="scss">
 page {
-	// background-color: $u-bg-color;
 	background-color: #fff;
 	padding: 0px;
 }

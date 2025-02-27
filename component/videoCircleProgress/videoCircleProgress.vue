@@ -38,11 +38,9 @@
 		methods: {
 			initCircle1(){
 				//实例对象
-				// console.log('调用了');
 				if(this.percentNum1) {
 					 
 					this.cbox1 = new VideoCircleBox(uni.createCanvasContext(`chartBox1`));
-					// console.log(this.percentNum1);
 					this.percent1 = this.percentNum1
 					this.cbox1.percent = this.percent1;
 					this.cbox1.drawCircle();
@@ -68,7 +66,6 @@
 		},
 		watch : {
 			percentNum1(newvalue) {
-				// console.log('变化了',newvalue);
 				this.initCircle1();
 			}
 		}
@@ -80,14 +77,10 @@
 .progress{ 
 	width: 44px;
 	height: 44px;
-	// padding: 0 30rpx;
+
 	.echart-box{ 
-		// padding: 15px 0;
-		// border-bottom: 1px solid #DDDDDD; 
-		
 		
 		.content{ 
-			// padding-top: 15rpx; 
 			
 			.chart{ 
 				width: 100rpx; 
@@ -106,7 +99,6 @@
 				background-color: #297DFE; 
 				color: #fff; 
 			}
-			
 		}
 	}
 }

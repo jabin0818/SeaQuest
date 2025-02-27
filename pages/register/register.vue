@@ -76,7 +76,6 @@
 					{
 							required: true, 
 							message: '请输入登录名', 
-							// 可以单个或者同时写两个触发验证方式 
 							trigger: ['change','blur'],
 						}
 					],
@@ -84,7 +83,6 @@
 						{
 							required: true,
 							message: '请输入密码', 
-							// 可以单个或者同时写两个触发验证方式 
 							trigger: ['change','blur']
 						}
 					],
@@ -120,14 +118,7 @@
 						uni.$u.toast('密码不一致')
 						return
 					} else {
-						// this.$store.commit("print/setPrint",{
-						// 	id: Math.floor(Math.random()*10) ,
-						// 	username: this.form.username,
-						// 	password: this.form.password
-						// })
-						// uni.$u.toast('注册成功！')
 						let result = await this.$store.dispatch('print/userRegister',{username: this.form.username,password: this.form.password});
-						console.log(result);
 						if(result === 'ok') {
 							this.$refs.uToast.show({
 								type: 'loading',
@@ -202,18 +193,6 @@
 				.input-icon{
 					margin-right: 8px;
 				}
-			}
-			
-			.register-username{
-				
-			}
-			
-			.register-password{
-				
-			}
-			
-			.register-rePassword{
-				
 			}
 			
 			.register-form-checkbox{

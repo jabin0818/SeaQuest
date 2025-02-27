@@ -1,6 +1,5 @@
 <template>
 	<view id="mine-content">
-		<!-- <u-button text="打卡" @tap="showClockPopup"></u-button> -->
 		<view class="top-container">
 			<view class="personal-information">
 				<view class="personal-information-left">
@@ -49,7 +48,6 @@
 		},
 		data() {
 			return {
-				// value1: 0,
 				show: false,
 				src: '../../static/img/user/avatar.png',
 				navigs: [{
@@ -99,20 +97,14 @@
 				url: '../../pages/mine/mine'
 			})
 			
-			console.log(JSON.stringify(this.userSingIn));
 			if(JSON.stringify(this.userSingIn) === "{}") {
-				console.log('还未有用户打卡信息');
 				this.isUserSingInInfo = false
 				
 			} else {
-				console.log('已有用户打卡信息');
 				let today = new Date().getDay()
 				let flag = this.userSingIn.day.findIndex(item => {
-					// console.log(item);
-					// console.log(today);
 					return item === today
 				})
-				console.log(flag);
 				if(flag !== -1) {
 					//今天未打卡
 					this.isSingIn = true
@@ -137,7 +129,6 @@
 				})
 			},
 			async showClockPopup() {
-				console.log('打卡');
 				
 				if(this.isSingIn) {
 					uni.$u.toast('今日已打卡！')
@@ -152,7 +143,6 @@
 					
 					singIn['day'].push(today)
 					
-					console.log(singIn);
 					let result = await this.$store.dispatch('global/addUserSingIn',singIn);
 					
 					let _that = this
@@ -175,7 +165,6 @@
 					singIn['username'] = this.userInfo.username
 					singIn['day'] = [today]
 					
-					console.log(singIn);
 					let result = await this.$store.dispatch('global/addUserSingIn',singIn);
 					
 					let _that = this
@@ -197,7 +186,6 @@
 				this.show = false
 			},
 			logout() {
-				console.log('退出登录');
 				this.modalShow = true
 			},
 			async modalConfirm() {
@@ -239,7 +227,6 @@ page {
 		justify-content: space-between;
 		width: 200%;
 		height: 330rpx;
-		//padding: 23px 20px 20px;
 		background: rgba(105, 201, 139, 1);
 	
 		position: relative;
@@ -248,11 +235,9 @@ page {
 		border-radius: 0 0 50% 50%;
 	
 		.personal-information {
-			//background: white;
 			
 			display: flex;
 			justify-content: space-between;
-			//padding-left: 12px;
 			
 			position: absolute;
 			left: 400rpx;
@@ -262,15 +247,12 @@ page {
 				width: 200rpx;
 	
 				.avatar-wrapper {
-					//background: black;					
 					width: 100%;
 					height: 100%;					
 				}
 			}
 	
 			.personal-information-mid {
-				//background: yellow;
-				//margin-left: 8px;
 				width: 340rpx;
 				height: 188rpx;
 				
@@ -293,12 +275,10 @@ page {
 			}
 	
 			.personal-information-right {
-				//background: oldlace;
 				width: 160rpx;
 				height: 188rpx;
 				.custom-style{
 					margin-top: 50rpx;
-					//margin-left: 16rpx;
 					border-radius: 30px;
 					background: rgba(224, 245, 231, 1);	
 					border: 1px solid rgba(63, 161, 98, 1);    
@@ -332,7 +312,6 @@ page {
 				width: 64px;
 				height: 23px;
 				opacity: 1;
-				/** 文本1 */
 				font-size: 16px;
 				font-weight: 400;
 				letter-spacing: 0px;
@@ -350,12 +329,8 @@ page {
 				height: 9.6px;
 				opacity: 1;
 			}
-	
 		}
-	
 	}
-	
-	
 }
 
 </style>

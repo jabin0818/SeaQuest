@@ -51,13 +51,10 @@
 </template>
 
 <script>
-	// const userData = require("../../js/user.json")
 	import {mapState} from 'vuex'
-	// import {}
 	export default {
 		data() {
 			return {
-				// user: userData, 
 				form: {
 					username: '',
 					password: '',
@@ -81,7 +78,6 @@
 						{
 							required: true,
 							message: '请输入密码', 
-							// 可以单个或者同时写两个触发验证方式 
 							trigger: ['change','blur'],
 						}
 					],
@@ -104,14 +100,9 @@
 				})
 			},
 			submit() {
-				console.log("点击")
-				// console.log(this.print.username,'name')
-				// console.log(this.print.password,'password')
 				this.$refs.loginForm.validate().then(async res => {
-					console.log(res);
 					if(res === true) {
 						let result = await this.$store.dispatch('print/userLogin',{username: this.form.username,password: this.form.password});
-						console.log(result);
 						if(result === 'ok') {
 							this.$refs.uToast.show({
 								type: 'loading',
@@ -133,14 +124,12 @@
 					}
 					
 				}).catch(errors => {
-					console.log(errors);
 					uni.$u.toast('不能为空~')
 				})
 			}
 		},
 		onReady() {
 			this.$refs.loginForm.setRules(this.rules)
-			// console.log(this.user)
 		},
 		computed: {
 			...mapState({
@@ -191,18 +180,6 @@
 				.input-icon{
 					margin-right: 8px;
 				}
-			}
-			
-			.login-username{
-				
-			}
-			
-			.login-password{
-				
-			}
-			
-			.login-rePassword{
-				
 			}
 			
 			.login-form-checkbox{

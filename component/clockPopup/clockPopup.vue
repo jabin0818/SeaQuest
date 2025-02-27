@@ -106,17 +106,13 @@ export default {
 	  }
 	},
 	mounted() {
-		// console.log(this.showPopup);
-		// console.log(this.show);
 	},
 	methods: {
 		open() {
-			// console.log('open');
 		},
 		close() {
 			this.show = false
 			this.$emit("popupClose")
-			// console.log('close');
 		},
 		shareFriend() {
 			this.$refs.uNotify.show({
@@ -131,59 +127,16 @@ export default {
 			})
 		},
 		isSing(id) {
-			// console.log(JSON.stringify(this.userSingIn));
 			if(JSON.stringify(this.userSingIn) !== "{}") {
 				let res = this.userSingIn.day.findIndex(item => {
 					return item === id
 				})
-				if(res === -1) {
-					return false
-				} else {
-					return true
-				}
+				return res !== -1
 			}
-			
-			// switch (id){
-			// 	case 1:
-			// 	this.judge(1)
-			// 		break;
-			// 	case 2:
-			// 	this.judge(2)
-			// 		break;
-			// 	case 3:
-			// 	this.judge(3)
-			// 		break;
-			// 	case 4:
-			// 	this.judge(4)
-			// 		break;
-			// 	case 5:
-			// 	this.judge(5)
-			// 		break;
-			// 	case 6:
-			// 	this.judge(6)
-			// 		break;
-			// 	case 7:
-			// 	this.judge(0)
-			// 		break;
-			// 	default:
-			// 		break;
-			// }
 		},
-		// judge(day) {
-		// 	let res = this.userSingIn.day.findIndex(item => {
-		// 		return item === day
-		// 	})
-		// 	if(res === -1) {
-		// 		return false
-		// 	} else {
-		// 		return true
-		// 	}
-		// }
 	},
 	computed: {
-		// ...mapState('print', ['userInfo']),
 		...mapState('global', ['userSingIn']),
-		
 	},
 	watch: {
 		showPopup(newvalue) {
@@ -196,17 +149,18 @@ export default {
 <style lang="scss" scoped>
 .clockPopup{
 	position: relative;
-	// width: 291px;
-	// height: 442px;
 	padding: 34px 20px 20px;
+
 	.clockPopup-header{
 		display: flex;
 		align-items: flex-start;
 		margin-bottom: 36px;
+
 		.clockPopup-header-left{
 			width: 60px;
 			height: 60px;
 			margin-right: 6px;
+
 			.avatar-wrapper{
 				width: 100%;
 				height: 100%;
@@ -232,14 +186,17 @@ export default {
 	
 	.clockPopup-main{
 		margin-bottom: 40px;
+
 		.clockPopup-info-list{
 			display: flex;
 			flex-wrap: wrap;
 			align-content: center;
 			margin-bottom: 2px;
+
 			.clockPopup-info-item{
 				width: 50%;
 				margin-bottom: 24px;
+
 				.title{
 					margin-bottom: 16px;
 					font-size: 12px;
@@ -320,11 +277,8 @@ export default {
 		border-radius: 50%;
 		width: 40px;
 		height: 40px;
-		// line-height: 40px;
-		// text-align: center;
 		background: rgba(255, 255, 255, 0.2);
 		border: 0.5px solid rgba(255, 255, 255, 0.5);      
 	}
-	
 }
 </style>

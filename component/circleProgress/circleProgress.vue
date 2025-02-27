@@ -50,14 +50,9 @@
 		methods: {
 			initCircle1(){
 				//实例对象
-				// console.log('调用了');
-				// console.log('1',this.percentNumOne);
-				// console.log('1',this.percentNumTwo);
-				// console.log('1',this.percentNumThree);
 				if(this.percentNumOne) {
 					
 					this.cbox1 = new CircleBox(uni.createCanvasContext(`chartBox1`));
-					// console.log(this.percentNumOne);
 					this.percent1 = this.percentNumOne
 					this.cbox1.percent = this.percent1;
 					this.cbox1.drawCircle();
@@ -65,7 +60,6 @@
 				} else if(this.percentNumTwo) {
 					
 					this.cbox2 = new CircleBox(uni.createCanvasContext(`chartBox2`));
-					// console.log(this.percentNumTwo);
 					this.percent2 = this.percentNumTwo
 					this.cbox2.percent = this.percent2;
 					this.cbox2.drawCircle();
@@ -73,7 +67,6 @@
 				} else if(this.percentNumThree) {
 					
 					this.cbox3 = new CircleBox(uni.createCanvasContext(`chartBox3`));
-					// console.log(this.percentNumThree);
 					this.percent3 = this.percentNumThree
 					//修改进度值
 					this.cbox3.percent = this.percent3;
@@ -107,21 +100,18 @@
 .wrap-box{ 
 	width: 30px;
 	height: 30px;
-	// padding: 0 30rpx;
+	
 	.echart-box{ 
-		// padding: 15px 0;
-		// border-bottom: 1px solid #DDDDDD; 
-		
-		
+
 		.content{ 
-			// padding-top: 15rpx; 
-			
+
 			.chart{ 
 				width: 58rpx; 
 				height: 58rpx; 
 				margin: 0 auto; 
 			}
 		}
+		
 		.btn-box{ 
 			text-align: center; 
 			

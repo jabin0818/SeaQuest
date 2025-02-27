@@ -77,12 +77,10 @@
 </template>
 
 <script>
-	// import Tabbar from '@/component/tabbar/tabbar.vue'
 	const Course = require('../../js/course.json')
 	import ScreenPopup from '@/component/screenPopup/screenPopup.vue'
 	export default {
 		components: {
-			// Tabbar
 			ScreenPopup
 		},
 		data() {
@@ -108,7 +106,6 @@
 				uni.redirectTo({url:'../login/login'});
 			}
 			this.saveCouse = Course
-			// console.log(options);
 			if(options.keyword !== "") {
 				this.keyWord = options.keyword
 				this.search(this.keyWord)
@@ -117,10 +114,8 @@
 		onShow() {},
 		methods: {
 			rightClick() {
-				console.log('rightClick');
 			},
 			leftClick() {
-				console.log('leftClick');
 			},
 			selectItem(e, index) {
 				this.activeItem = index
@@ -156,18 +151,13 @@
 				})
 			},
 			init(e, price, duration) {
-				// console.log(e,'e')
-				// console.log(price);
-				// console.log(duration);
 				this.couses = []
 				if(e != null && e.find(i => i === 1)){
-					// console.log('有分类');
 					e.forEach((item,index) => {
 						switch(index) {
 							case 0:
 								if(item === 1)	{
 									Course.forEach(element => {
-										// console.log(element)
 										if(element.type === 'design')
 										this.couses.push(element)
 									})
@@ -228,14 +218,12 @@
 				} 
 				
 				if(price) {
-					// console.log('有区间');
 					this.couses = this.couses.filter(item => {
 						return Number(item.price) > price.min && Number(item.price) < price.max
 					})
 				}
 				
 				if(duration && duration.find(i => i === 1)) {
-					// console.log('有时长');
 					let conditions = []
 					duration.forEach((item,index) => {
 						
@@ -272,20 +260,8 @@
 								break;
 						}
 					})
-					// console.log(conditions);
-					// let flag = this.isScope('24小时15分','24-28')
-					// console.log(flag);
-					// let a = conditions.some((f)=>{
-					// 	console.log(f);
-					// 	console.log(this.isScope('24小时15分',f));
-					// 	return this.isScope('24小时15分',f)
-					// })
-					// console.log(a);
 					this.couses = this.couses.filter(item => {
-						// console.log('条件是？',conditions );
 						return conditions.some((f)=>{
-							// console.log('f是？',f);
-							// console.log(await this.isScope(item.duration,f));
 							return this.isScope(item.duration,f)
 						})
 					})
@@ -294,44 +270,25 @@
 				this.saveCouse = this.couses
 			},
 			change(e) {
-				// console.log(e);
 			},
-			// replace(str) {
-			// 	// console.log('要替换的string', str);
-			// 	let newstr = str.replace(/小时/g, ':')
-			// 	newstr = newstr.replace(/分/g, '')
-			// 	console.log(newstr);
-			// 	return newstr
-			// },
 			//判断时长是否在指定范围内 格式3小时20分钟
 			isScope(current, target) {
-				// console.log('时长', current);
-				// console.log('指定范围', target);
 				
 				let curList = current.replace(/分/g, '').split('小时')
 				let tarList = target.split('-')
-				// console.log(curList);
-				// console.log(tarList);
 				let hour = Number(curList[0])
-				// let minute = Number(curList[1])
 				let min = Number(tarList[0])
 				let max = Number(tarList[1])
 				if(hour >= min && hour < max) {
-					// console.log('在区间内');
 					return true
 				} else {
-					// console.log('不在区间内');
 					return false
 				}
 				
-				
-				// return newstr
 			},
 			search(e) {
-				// console.log(e,'e')
 				if(e != '') {
 					this.couses = []
-					// console.log(this.saveCouse);
 					this.saveCouse.forEach(item => {
 						if(item.title.includes(e)){
 							this.couses.push(item)
@@ -345,14 +302,12 @@
 		},
 		onReady() {
 			this.saveCouse = Course
-			// this.couses = Course
 		}
 	}
 </script>
 
 <style lang="scss">
 	page {
-		// background-color: $u-bg-color;
 		background-color: #fff;
 	}
 </style>

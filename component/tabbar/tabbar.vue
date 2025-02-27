@@ -47,13 +47,6 @@
 						src="../../static/img/tabbar/search.png"
 					></image>
 				</view>
-				
-				
-				<!-- <image
-					class="u-page__item__slot-icon"
-					slot="inactive-icon"
-					src="../../static/img/tabbar/search.png"
-				></image> -->
 			</u-tabbar-item>
 			<u-tabbar-item class="customTabbar-item" text="消息">
 				<image
@@ -123,7 +116,6 @@
 			methods:{
 				tabbarChange(e) {
 					if(e === 2) {
-						// console.log('是查找');
 						uni.navigateTo({
 							url: '/'+this.list[e].path
 						})
@@ -160,8 +152,6 @@
 				height: 44rpx;
 				margin-bottom: 8px;
 			}
-			
-			
 			
 			.customTabbar-item-searchWarpper{
 				position: absolute;

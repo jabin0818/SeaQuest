@@ -57,7 +57,6 @@
 						
 						<view class="course-button-context">
 							<view class="course-button" @tap="toCourseDetail(index)">
-								<!-- <view class="course-button-triangle"></view> -->
 								<u-icon class="playCourse" name="arrow-down-fill" size="24px" color="#fff"></u-icon>
 							</view>
 						</view>
@@ -83,50 +82,33 @@
 			if(userInfo === '' || userInfo === null){
 				uni.redirectTo({url:'../login/login'});
 			}
-			console.log(this.global);
 			this.courses = Course.filter((item) => {
 				return this.global.hasOwnProperty(item.id)
 			})
 		},
 		methods: {
-			randColor(index) {
-				// console.log(index);
+			randColor() {
 				const num = Math.floor(Math.random()*(4-1)+1)
-				console.log(num);
 				if(num === 1) {
 					return 'colorOne'
-					
 				} else if(num === 2) {
 					return 'colorTwo'
-					
 				} else if(num === 3) {
 					return 'colorThree'
-					
 				}
 			},
 			isFinish(item) {
 				let flag = this.global[item.id].find((item) => {
 					return item === 0
 				})
-				console.log(flag);
 				if(flag === undefined) {
 					return true
 				} else {
 					return false 
 				}
 			},
-			// unfinishedNum(item) {
-			// 	let num = 0
-			// 	item.forEach((item1) => {
-			// 		if(item1 === 0) {
-			// 			num ++ 
-			// 		}
-			// 	})
-			// 	return num 
-			// },
 			finishedNum(item) {
 				let num = 0
-				// console.log(item);
 				this.global[item.id].forEach((item1) => {
 					if(item1 === 1) {
 						num ++ 
@@ -143,22 +125,15 @@
 				return progress
 			},
 			toCourseDetail(id){
-				console.log(id)
 				uni.navigateTo({
 					url:`/pages/courseDetail/courseDetail?id=${id}`,
-					
 				})
 			},
 		},
 		computed: {
 			...mapState({
 				global: state => state.global.userCourse,
-				// print: state => state.print.userInfo
 			})
-			
-		},
-		onLaunch() {
-			
 		},
 	}
 </script>
@@ -233,7 +208,6 @@
 	}
 
 	.course-card-list{		
-		//padding: 0 20px 85px;
 		//card背景颜色
 		$color-theme1:rgba(224, 245, 231, 1); /* 浅青色 */
 		$color-theme2:rgba(254, 242, 224, 1); /* 浅橙色 */
@@ -337,16 +311,12 @@
 				font-family: "Noto Sans SC";
 				letter-spacing: 0px;
 				line-height: 20px;
-				// text-align: center;
-				// margin-left: 20px;
 				height: 43px;
 				color: rgba(31, 31, 57, 1);
 				vertical-align: top;
 			}
 			
 			.panel-today-body{
-				//background-color: green;
-				// padding: 27px 20px;
 				margin:38px 0 0 0;
 				height: 34px;
 				.study-progressBar{
@@ -371,9 +341,6 @@
 						
 			.course-card-bottom{
 				display: flex;
-				//background-color: yellow;
-				    // position: absolute;
-				    // bottom: 0;
 				.course-number{
 					padding-top:15px ;
 					padding-left: 20px;
@@ -408,8 +375,6 @@
 						border-radius: 50%;
 						background-color: $color-button2;
 						box-sizing:border-box;
-						// padding-left: 10px;
-						// padding-top: 14px;
 						
 						.playCourse{
 							transform: rotate(31deg);
@@ -418,17 +383,6 @@
 							left: -1px;
 						}
 						
-						// .course-button-triangle{
-						// 	width: 14px;
-						// 	height: 14px;
-						// 	// border-top: 0px solid transparent;
-						// 	// border-bottom: 0px solid transparent;
-						// 	// border-left: 15px solid white;
-						// 	// border-right: 0px solid transparent;
-						// 	 background: linear-gradient(45deg, white, white 50%, transparent 50%, transparent 100%);
-						// 	 -moz-transform:rotate(225deg);
-						// 	 -webkit-transform:rotate(224deg);
-						// }
 					}
 				}
 			}

@@ -1,56 +1,56 @@
 [
-	{
-		"id": "1",
-		"avatar": "../../static/img/message/avatar2.png",
-		"username": "小白老师",
-		"status": "在线",
-		"time": "下午04:32",
-		"info": "祝贺你完成第一课，继续努力！有空多和同学沟通学习的内容，希望对你有所帮助。",
-		"img": "../../static/img/message/pic.png"
-	},
-	{
-		"id": "2",
-		"avatar": "../../static/img/message/avatar1.png",
-		"username": "虎里虎气",
-		"status": "在线",
-		"time": "下午05:32",
-		"info": "您的课程已更新，您可以在学习课程中查看新课程。",
-		"img": ""
-	},
-	{
-		"id": "3",
-		"avatar": "../../static/img/message/p1.png",
-		"username": "修修捏英文人文科普",
-		"status": "离线",
-		"time": "上午 01:04",
-		"info": "谢谢关注，不定期会更新英语学习视频，英文人文科普，记得查收哦",
-		"img": "../../static/img/message/p2.png"
-	},
-	{
-		"id": "4",
-		"avatar": "../../static/img/message/p3.png",
-		"username": "法山叔",
-		"status": "在线",
-		"time": "下午22:06",
-		"info": "谢谢关注。我们一起度过一段旅程。",
-		"img": "../../static/img/message/p4.png"
-	},
-	{
-		"id": "5",
-		"avatar": "../../static/img/message/p5.png",
-		"username": "宋浩老师官方",
-		"status": "在线",
-		"time": "上午10:00",
-		"info": "嗨！同学你好，我是宋浩老师。欢迎大家关注我的视频，我录制的高数、线代、概率等课程，帮助了很多同学顺利通过期末、升本，考研考试等，这让我倍感欣慰！后续还会继续整活，为同学们推出更多优质课程。",
-		"img": "../../static/img/message/p6.png"
-	},
-	{
-		"id": "6",
-		"avatar": "../../static/img/message/p5.png",
-		"username": "宋浩老师官方",
-		"status": "在线",
-		"time": "下午19:30",
-		"info": "嗨！你好，我是宋浩老师。又到了期末季，宋老师录制的数学课看起来了吗？近期宋老师爆肝录了几套新课，希望能帮助到有需要的你。",
-		"img": "../../static/img/message/p7.png"
-	}
+  {
+    "id": "1",
+    "avatar": "../../static/img/message/avatar2.png",
+    "username": "小白老师",
+    "status": "在线",
+    "time": "下午04:32",
+    "info": "祝贺你完成第一课，继续努力！有空多和同学沟通学习的内容，希望对你有所帮助。",
+    "img": "../../static/img/message/pic.png"
+  },
+  {
+    "id": "2",
+    "avatar": "../../static/img/message/avatar1.png",
+    "username": "虎里虎气",
+    "status": "在线",
+    "time": "下午05:32",
+    "info": "您的课程已更新，您可以在学习课程中查看新课程。",
+    "img": ""
+  },
+  {
+    "id": "3",
+    "avatar": "../../static/img/message/p1.png",
+    "username": "修修捏英文人文科普",
+    "status": "离线",
+    "time": "上午 01:04",
+    "info": "谢谢关注，不定期会更新英语学习视频，英文人文科普，记得查收哦",
+    "img": "../../static/img/message/p2.png"
+  },
+  {
+    "id": "4",
+    "avatar": "../../static/img/message/p3.png",
+    "username": "法山叔",
+    "status": "在线",
+    "time": "下午22:06",
+    "info": "谢谢关注。我们一起度过一段旅程。",
+    "img": "../../static/img/message/p4.png"
+  },
+  {
+    "id": "5",
+    "avatar": "../../static/img/message/p5.png",
+    "username": "宋浩老师官方",
+    "status": "在线",
+    "time": "上午10:00",
+    "info": "嗨！同学你好，我是宋浩老师。欢迎大家关注我的视频，我录制的高数、线代、概率等课程，帮助了很多同学顺利通过期末、升本，考研考试等，这让我倍感欣慰！后续还会继续整活，为同学们推出更多优质课程。",
+    "img": "../../static/img/message/p6.png"
+  },
+  {
+    "id": "6",
+    "avatar": "../../static/img/message/p5.png",
+    "username": "宋浩老师官方",
+    "status": "在线",
+    "time": "下午19:30",
+    "info": "嗨！你好，我是宋浩老师。又到了期末季，宋老师录制的数学课看起来了吗？近期宋老师爆肝录了几套新课，希望能帮助到有需要的你。",
+    "img": "../../static/img/message/p7.png"
+  }
 ]
